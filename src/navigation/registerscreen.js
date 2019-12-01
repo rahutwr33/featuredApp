@@ -5,13 +5,15 @@ import {
     Login_Screen,
     Register_Screen,
     TAB1_SCREEN,
-    TAB2_SCREEN
+    TAB2_SCREEN,
+    Sidebar_SCREEN
   } from './screen';
 import Splash from '../containers/splash/splash';
 import LoginScreen from '../containers/login';
 import RegisterScreen from '../containers/register';
 import HomeScreen from '../containers/home';
 import SettingScreen from '../containers/setting';
+import SidebarScreen from '../containers/sidebar';
 
 
 
@@ -35,5 +37,6 @@ function WrappedComponent(Component) {
     Navigation.registerComponent(Register_Screen, () => WrappedComponent(RegisterScreen));
     Navigation.registerComponent(TAB1_SCREEN, () => WrappedComponent(HomeScreen));
     Navigation.registerComponent(TAB2_SCREEN, () => WrappedComponent(SettingScreen));
+    Navigation.registerComponent(Sidebar_SCREEN, () => WrappedComponent(SidebarScreen));
     console.info('All screens have been registered...');
   }
