@@ -7,22 +7,6 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-import {MainScreen} from './src/navigation';
-
-
-const App = () => {
-  return (
-      <MainScreen/>
-  );
-};
-
-
-export default App;
+import {MainScreen,pushTabBasedApp} from './src/navigation';
+import { Navigation } from 'react-native-navigation';
+Navigation.events().registerAppLaunchedListener(() => pushTabBasedApp());

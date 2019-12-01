@@ -1,3 +1,3 @@
 export * from './screen';
-export { MainScreen} from './Navigation';
+export { MainScreen,pushTabBasedApp} from './Navigation';
 
